@@ -3,5 +3,6 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm install
 COPY . .
-CMD ["npm","run", "start"]
+RUN npm run build
+CMD ["npm","run", "start-prod"]
 EXPOSE 5000

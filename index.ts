@@ -4,6 +4,8 @@ import bodyParser from "body-parser";
 
 import authorRouter from "./features/authors/authorRouter";
 import booksRouter from "./features/books/booksRouter";
+import dotenv from "dotenv";
+dotenv.config();
 
 const app = express();
 const port: number | string = process.env.PORT || 5000;
